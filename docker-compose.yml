@@ -1,0 +1,13 @@
+
+version: '2.0'
+
+services:
+    Website1:
+        image: ghcr.io/Pfroystad/Pdoc:latest #change samoht89 to your username and website1 to your respitory name
+        deploy:
+            Labels:
+                com.centurylinklabs.watchtower.enable: "true"
+        container_name: pfroystad #Your firstname-"usernameAtSchool"
+        restart: always
+        ports:
+            - "80:80" #Change first port if using nginx
